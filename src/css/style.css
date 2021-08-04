@@ -1,0 +1,18 @@
+@import '~normalize.css';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;1,400&display=swap');
+
+html, body {
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+    text-align: center;
+    color: red;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    background: url("../assets/armenia.png") center / cover no-repeat;
+    font-weight: 700;
+}
