@@ -1,10 +1,11 @@
 export const createAnalytics = () => {
+
   let counter = 0;
   let isDestroyed = false;
 
   const analyticsHandler = () => {
     counter++;
-  }
+  };
 
   document.addEventListener('click', analyticsHandler);
 
@@ -18,7 +19,7 @@ export const createAnalytics = () => {
       if (isDestroyed) {
         return 'No analytics';
       }
-      return counter
+      return counter;
     }
-  }
-}
+  };
+};

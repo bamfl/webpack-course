@@ -1,6 +1,5 @@
+import $ from 'jquery';
 import '../css/style.css';
-import json from '../assets/json.json';
-import png from '../assets/armenia.png';
 
 import {Post} from "./modules/post";
 import {createAnalytics} from "./modules/analytics";
@@ -10,5 +9,5 @@ console.log(post.toString(), 'hi');
 
 window.analytics = createAnalytics();
 
-console.log('json', json);
-console.log('png', png);
+console.log('jQuery', $('.logo'));
+$('.logo').addClass('code10');
