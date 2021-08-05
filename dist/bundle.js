@@ -9,6 +9,39 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/js/index.js":
+/*!*************************!*\
+  !*** ./src/js/index.js ***!
+  \*************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _css_style_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../css/style.css */ \"./src/css/style.css\");\n/* harmony import */ var _scss_style1_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../scss/style1.scss */ \"./src/scss/style1.scss\");\n/* harmony import */ var _modules_post__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/post */ \"./src/js/modules/post.js\");\n/* harmony import */ var _modules_analytics__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/analytics */ \"./src/js/modules/analytics.js\");\n\n\n\n\n\nvar post = new _modules_post__WEBPACK_IMPORTED_MODULE_3__.Post('Webpack title');\nconsole.log(post.toString(), 'hi');\nwindow.analytics = (0,_modules_analytics__WEBPACK_IMPORTED_MODULE_4__.createAnalytics)();\nconsole.log('jQuery', jquery__WEBPACK_IMPORTED_MODULE_0___default()('.logo'));\njquery__WEBPACK_IMPORTED_MODULE_0___default()('.logo').addClass('code10');\n\n//# sourceURL=webpack://webpack-course/./src/js/index.js?");
+
+/***/ }),
+
+/***/ "./src/js/modules/analytics.js":
+/*!*************************************!*\
+  !*** ./src/js/modules/analytics.js ***!
+  \*************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"createAnalytics\": () => (/* binding */ createAnalytics)\n/* harmony export */ });\nvar createAnalytics = function createAnalytics() {\n  var counter = 0;\n  var isDestroyed = false;\n\n  var analyticsHandler = function analyticsHandler() {\n    counter++;\n  };\n\n  document.addEventListener('click', analyticsHandler);\n  return {\n    destroy: function destroy() {\n      document.removeEventListener('click', analyticsHandler);\n      isDestroyed = true;\n    },\n    getClicks: function getClicks() {\n      if (isDestroyed) {\n        return 'No analytics';\n      }\n\n      return counter;\n    }\n  };\n};\n\n//# sourceURL=webpack://webpack-course/./src/js/modules/analytics.js?");
+
+/***/ }),
+
+/***/ "./src/js/modules/post.js":
+/*!********************************!*\
+  !*** ./src/js/modules/post.js ***!
+  \********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"Post\": () => (/* binding */ Post)\n/* harmony export */ });\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }\n\nfunction _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }\n\nvar Post = /*#__PURE__*/function () {\n  function Post(title) {\n    _classCallCheck(this, Post);\n\n    this.title = title;\n    this.date = new Date();\n  }\n\n  _createClass(Post, [{\n    key: \"toString\",\n    value: function toString() {\n      return JSON.stringify({\n        title: this.title,\n        date: this.date.toJSON()\n      });\n    }\n  }]);\n\n  return Post;\n}();\n\n//# sourceURL=webpack://webpack-course/./src/js/modules/post.js?");
+
+/***/ }),
+
 /***/ "./node_modules/jquery/dist/jquery.js":
 /*!********************************************!*\
   !*** ./node_modules/jquery/dist/jquery.js ***!
@@ -38,39 +71,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://webpack-course/./src/css/style.css?");
-
-/***/ }),
-
-/***/ "./src/js/index.js":
-/*!*************************!*\
-  !*** ./src/js/index.js ***!
-  \*************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _css_style_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../css/style.css */ \"./src/css/style.css\");\n/* harmony import */ var _scss_style1_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../scss/style1.scss */ \"./src/scss/style1.scss\");\n/* harmony import */ var _modules_post__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/post */ \"./src/js/modules/post.js\");\n/* harmony import */ var _modules_analytics__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/analytics */ \"./src/js/modules/analytics.js\");\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nconst post = new _modules_post__WEBPACK_IMPORTED_MODULE_3__.Post('Webpack title');\r\nconsole.log(post.toString(), 'hi');\r\n\r\nwindow.analytics = (0,_modules_analytics__WEBPACK_IMPORTED_MODULE_4__.createAnalytics)();\r\n\r\nconsole.log('jQuery', jquery__WEBPACK_IMPORTED_MODULE_0___default()('.logo'));\r\njquery__WEBPACK_IMPORTED_MODULE_0___default()('.logo').addClass('code10');\n\n//# sourceURL=webpack://webpack-course/./src/js/index.js?");
-
-/***/ }),
-
-/***/ "./src/js/modules/analytics.js":
-/*!*************************************!*\
-  !*** ./src/js/modules/analytics.js ***!
-  \*************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"createAnalytics\": () => (/* binding */ createAnalytics)\n/* harmony export */ });\nconst createAnalytics = () => {\r\n\r\n  let counter = 0;\r\n  let isDestroyed = false;\r\n\r\n  const analyticsHandler = () => {\r\n    counter++;\r\n  };\r\n\r\n  document.addEventListener('click', analyticsHandler);\r\n\r\n  return {\r\n    destroy() {\r\n      document.removeEventListener('click', analyticsHandler);\r\n      isDestroyed = true;\r\n    },\r\n\r\n    getClicks() {\r\n      if (isDestroyed) {\r\n        return 'No analytics';\r\n      }\r\n      return counter;\r\n    }\r\n  };\r\n};\n\n//# sourceURL=webpack://webpack-course/./src/js/modules/analytics.js?");
-
-/***/ }),
-
-/***/ "./src/js/modules/post.js":
-/*!********************************!*\
-  !*** ./src/js/modules/post.js ***!
-  \********************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"Post\": () => (/* binding */ Post)\n/* harmony export */ });\nclass Post {\r\n  constructor(title) {\r\n    this.title = title;\r\n    this.date = new Date()\r\n  }\r\n\r\n  toString() {\r\n    return JSON.stringify({\r\n      title: this.title,\r\n      date: this.date.toJSON()\r\n    })\r\n  }\r\n}\n\n//# sourceURL=webpack://webpack-course/./src/js/modules/post.js?");
 
 /***/ })
 
