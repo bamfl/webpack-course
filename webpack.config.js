@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require("copy-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 
 module.exports = {
   // npm run dev or npm run prod
@@ -9,7 +10,7 @@ module.exports = {
   entry: path.resolve(__dirname, './src/js/index.js'),
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle[contenthash].js',
+    filename: 'bundle.js', // bundle[contenthash].js
     clean: true,
   },
   plugins: [
@@ -22,7 +23,7 @@ module.exports = {
       ],
     }),
 		new MiniCssExtractPlugin({
-			filename: 'style[contenthash].css',
+			filename: 'style.css', // style[contenthash].css
 		})
   ],
   module: {
@@ -32,15 +33,37 @@ module.exports = {
         type: 'asset/resource'
       },
 			{
-        test: /\.css$/i,
-        use: [MiniCssExtractPlugin.loader, "css-loader"],
+        test: /\.css$/,
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader,
+            // options: {
+            //   publicPath: path.resolve(__dirname, 'dist/сss'),
+            // },
+          },
+          "css-loader",
+        ],
+      },
+			{
+        test: /\.s[ac]ss$/i,
+        use: [
+					{
+						loader: MiniCssExtractPlugin.loader
+					},
+          "css-loader",
+          "sass-loader",
+        ],
       },
     ],
   },
 	optimization: {
-		splitChunks: {
-			chunks: 'all'
-		}
+		// splitChunks: {
+		// 	chunks: 'all'
+		// },
+		minimizer: [
+      `...`,
+      new CssMinimizerPlugin(),
+    ],
 	},
 	devServer: {
     contentBase: path.join(__dirname, 'dist'),

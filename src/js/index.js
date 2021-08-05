@@ -1,5 +1,6 @@
 import $ from 'jquery';
 import '../css/style.css';
+import '../scss/style1.scss';
 
 import {Post} from "./modules/post";
 import {createAnalytics} from "./modules/analytics";
