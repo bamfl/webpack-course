@@ -351,35 +351,32 @@ template {
   display: none;
 }
 
-/*!*********************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./src/css/style.css ***!
-  \*********************************************************************/
+/*!**************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/scss/style.scss ***!
+  \**************************************************************************************************************/
 @import url(https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;1,400&display=swap);
-/*!*************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./src/css/style.css (1) ***!
-  \*************************************************************************/
+/*!******************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/scss/style.scss (1) ***!
+  \******************************************************************************************************************/
 html,
 body {
-	font-family: "Roboto", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 h1 {
-	text-align: center;
-	color: green;
+  text-align: center;
+  color: green;
 }
 
 .logo {
-	width: 50px;
-	height: 50px;
-	background: url(2ee227174de17e6e8e69.png) center / cover no-repeat;
-	font-weight: 700;
-	margin: 0 auto;
+  width: 50px;
+  height: 50px;
+  background: url(2ee227174de17e6e8e69.png) center/cover no-repeat;
+  font-weight: 700;
+  margin: 0 auto;
 }
 
-/*!***************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/scss/style1.scss ***!
-  \***************************************************************************************************************/
-.container .scss {
+.scss {
   text-align: right;
   color: blue;
 }
